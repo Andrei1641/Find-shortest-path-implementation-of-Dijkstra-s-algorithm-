@@ -1,11 +1,13 @@
+import heapq
+
 class Node:
     def __init__(self):
-        self.__path: dict[Node, int] = {}
+        self.paths: list[list[int | Node]] = []
+        heapq.heapify(self.paths)
 
+    def add_path(self, next_n: 'Node', towards_time: int = 10, backwards_time: int = 10):
+        heapq.heappush(self.paths, [towards_time, next_n])
+        heapq.heappush(next_n.paths, [backwards_time, self])
+        # self.paths[next_n] = towards_time
+        # next_n.paths[self] = backwards_time
 
-    def add_path(self, next_n: 'Node'):
-        self.__path.update({next_n : 10})
-
-
-    def set_time(self, next_n: 'Node', time: int):
-        self.__path[next_n] = time
