@@ -11,7 +11,7 @@ f = Node()
 node_ls: list[Node] = [a, b, c, d, e, f]
 
 # a - start point
-distance_to_point = [
+heap_distance_to_point = [
     (0, a),
     (float('inf'), b),
     (float('inf'), c),
@@ -20,6 +20,14 @@ distance_to_point = [
     (float('inf'), f)
 ]
 
+dict_distance_to_point = {
+    a: 0,
+    b: float('inf'),
+    c: float('inf'),
+    d: float('inf'),
+    e: float('inf'),
+    f: float('inf')
+}
 
 a.add_path(b, 5, 5)
 a.add_path(c, 0, 0)
