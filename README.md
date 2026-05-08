@@ -7,7 +7,9 @@ It can't be created near to another one.
 
 ## Connect Nodes
 
-To connect two nodes select needed Nodes and press enter.
+To connect two nodes select needed Nodes and press enter. "Towards" stands for direction from the first 
+selected Node to the second one. "Backwards" stands for direction from the second 
+selected Node to the first one.
 
 ## Select Start/Finish
 
